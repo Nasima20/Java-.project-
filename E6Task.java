@@ -4,26 +4,22 @@ import java.util.Scanner;
 
 public class E6Task {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("type a number");
-        int primeNumbers=sc.nextInt();
-        boolean isprime=true;
-        for (int i=0; i<primeNumbers; i++){
-            if (primeNumbers%2==0) {
-                isprime = false;
+        int primeNumbers = sc.nextInt();
+
+        for (int i = 2; i <= primeNumbers; i++) {
+            if (primeNumbers % 2 == 0 && primeNumbers != i) {
+                System.out.println(primeNumbers+"not prime");
                 break;
+            } else if (primeNumbers == i) {
+
+                System.out.println(primeNumbers+"not prime");
             }
 
-            }
-            if (isprime) {
-                System.out.println(primeNumbers + " is a prime number.");
-            } else {
-                System.out.println(primeNumbers + " is not a prime number.");
-            }
         }
     }
-
-
+}
 
 
 
